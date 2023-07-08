@@ -6,7 +6,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 //absolute path and relative path are things look em up 
 // here we gonna use absolute path 
-
+const port = process.env.PORT || 3000
 // console.log(__dirname)
 // console.log(__filename)
 const pathToPublic = path.join(__dirname, '../public') // Static page path
@@ -97,8 +97,8 @@ app.get('*', (req, res) => {
 // })
 
 
-app.listen(3000, () => {
-    console.log('Port is up and running at 3000')
+app.listen(port, () => {
+    console.log('Port is up and running at ' + port)
 })
 
 //Lec-3 was all about serving static whole page as asset 
